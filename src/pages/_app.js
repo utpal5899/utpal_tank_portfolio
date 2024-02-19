@@ -1,6 +1,7 @@
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar"; 
+import Projects from "@/components/Projects";
 import "@/styles/globals.css";
 import { Montserrat } from "next/font/google";
 import Head from "next/head";
@@ -22,6 +23,7 @@ export default function App({ Component, pageProps }) {
       <Navbar/>
     <Component {...pageProps} />
     <Experience/>
+    <Projects/>
     <Footer />
     </main>
     </>
