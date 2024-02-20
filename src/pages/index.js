@@ -6,7 +6,7 @@ import Animatedtext from "@/components/Animatedtext";
 import Link from "next/link";
 import { LinkArrow } from "@/components/Icons";
 import HireMe from "@/components/HireMe";
- 
+
 import lightbulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head> */}
-      <main className="flex items-center mt-7 text-dark w-full min-h-screen">
+      <main className="flex items-center mt-7 text-dark w-full min-h-screen dark:text-light">
         <Layout className="pt-0">
           <div className="flex items-center justify-between w-full">
             <div className="w-1/2 ">
@@ -25,6 +25,8 @@ export default function Home() {
                 src={profileimg}
                 alt="utpal tank"
                 className=" w-80 ml-20 h-80 object-cover rounded-full   "
+                priority
+                sizes="(max-width:768px) 100vw,(max-width:1200) 50vw, 50vw"
               />
             </div>
             <div className="w-3/5   flex flex-col items-center self-center">
@@ -42,12 +44,16 @@ export default function Home() {
                 <Link
                   href="/dummy.pdf"
                   download={true}
-                  className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold  hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark"
+                  className="flex items-center bg-dark dark:text-dark dark:bg-light text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:dark:bg-dark hover:dark:border-light   hover:dark:text-light hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark"
                   target="_blank"
                 >
                   Resume <LinkArrow className={"w-6 ml-1"} />
                 </Link>
-                <Link href="utpaltak1999ca@gmail.com" className=" ml-4 text-lg font-medium  capitalize text-dark underline" target="_blank">
+                <Link
+                  href="utpaltak1999ca@gmail.com"
+                  className="  ml-4 text-lg font-medium  capitalize text-dark underline dark:text-light"
+                  target="_blank"
+                >
                   Contact
                 </Link>
               </div>
@@ -55,9 +61,9 @@ export default function Home() {
           </div>
         </Layout>
       </main>
-      <HireMe/>
+      <HireMe />
       <div className="absolute bottom-8 right-8 inline-block w-24">
-        <Image src={lightbulb} alt="random_image" className="w-full h-auto"/>
+        <Image src={lightbulb} alt="random_image" className="w-full h-auto" />
       </div>
     </>
   );

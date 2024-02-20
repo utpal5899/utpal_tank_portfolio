@@ -5,7 +5,7 @@ import Liicon from "./Liicon";
 let Details = ({ position, campany, companyLink, time, address, work }) => {
     const ref= useRef(null)
   return (
-    <li ref={ref} className="my-8 first:mt:0 last:mb-0 w-[60%] mx-auto flex flex-col items-center   justify-between ">
+    <li ref={ref} className="my-8 first:mt:0 last:mb-0 w-[60%] mx-auto flex flex-col items-center  dark:text-light  justify-between ">
         <Liicon reference={ref}/>
       <div>
         <h3 className="capitalize font-bold  text-2xl ">
@@ -17,7 +17,7 @@ let Details = ({ position, campany, companyLink, time, address, work }) => {
         <span className="">
           {time} | {address}
         </span>
-        <p className="font-sans w-full capitalize font-medium text-dark/75  ">
+        <p className="font-sans w-full capitalize font-medium text-dark/75   dark:text-light  ">
           {work}
         </p>
       </div>
@@ -33,16 +33,16 @@ export default function Experience() {
   });
 
   return (
-    <div className="my-40">
+    <div className="my-40 dark:text-light ">
       <h2 className="font-bold text-8xl mb-32 w-full text-center">
         Experience
       </h2>
       <div ref={ref} className="w-[75%] mx-auto relative">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className=" h-full w-[4px] bg-dark absolute top-0 left-9 origin-top "
+          className=" h-full w-[4px] bg-dark absolute top-0 left-9 origin-top  dark:bg-light  "
         />
-        <ul className="w-full flex flex-col items-start justify-between ml-4">
+        <ul className="w-full flex flex-col items-start  dark:text-light  justify-between ml-4">
           <Details
             position={"Software Engineer"}
             campany={"Google"}
