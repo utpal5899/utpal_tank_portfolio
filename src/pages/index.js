@@ -17,54 +17,52 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head> */}
-      <main className="flex items-center mt-7 text-dark w-full min-h-screen dark:text-light">
-        <Layout className="pt-0">
-          <div className="flex items-center justify-between w-full">
-            <div className="w-1/2 ">
-              <Image
-                src={profileimg}
-                alt="utpal tank"
-                className=" w-80 ml-20 h-80 object-cover rounded-full   "
-                priority
-                sizes="(max-width:768px) 100vw,(max-width:1200) 50vw, 50vw"
-              />
-            </div>
-            <div className="w-3/5   flex flex-col items-center self-center">
-              <Animatedtext
-                className="!text-6xl !text-left"
-                text="Turning Vision Into Reality With Code And Design."
-              />
-              <p className="my-4 text-base font-medium">
-                As a skilled full-stack developer, I am dedicated to turning
-                ideas into innovative web applications. Explore my latest
-                projects and articles, showcasing my expertise in React.js and
-                web development.
-              </p>
-              <div className="flex items-center self-start mt-2">
-                <Link
-                  href="/dummy.pdf"
-                  download={true}
-                  className="flex items-center bg-dark dark:text-dark dark:bg-light text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:dark:bg-dark hover:dark:border-light   hover:dark:text-light hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark"
-                  target="_blank"
-                >
-                  Resume <LinkArrow className={"w-6 ml-1"} />
-                </Link>
-                <Link
-                  href="utpaltak1999ca@gmail.com"
-                  className="  ml-4 text-lg font-medium  capitalize text-dark underline dark:text-light"
-                  target="_blank"
-                >
-                  Contact
-                </Link>
-              </div>
-            </div>
-          </div>
+      <main className="flex items-center mt-7  text-dark w-full min-h-screen    dark:text-light ">
+        <Layout className="pt-0 md:pt-16 sm:pt-8">
+        <div className="flex items-center justify-between w-full lg:flex-col lg:self-center lg:text-center">
+  <div className="w-full lg:w-80 flex justify-center">
+    <Image
+      src={profileimg}
+      alt="utpal tank"
+      className="w-full h-auto lg:h-80 lg:w-80 md:inline-block md:w-full rounded-full"
+      priority
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+    />
+  </div>
+  <div className="w-full ml-9 flex flex-col items-center self-center lg:w-full lg:text-center">
+    <Animatedtext
+      className="text-6xl text-left xl:text-5xl lg:text-6xl md:text-2xl"
+      text="Turning Vision Into Reality With Code And Design."
+    />
+    <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
+      As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects and articles, showcasing my expertise in React.js and web development.
+    </p>
+    <div className="flex items-center self-start mt-2 lg:self-center">
+      <Link
+        href="/dummy.pdf"
+        download={true}
+        className="flex items-center bg-dark dark:text-dark dark:bg-light text-light p-2.5 px-6 rounded-lg text-lg font-semibold md:text-sm sm:text-xs hover:dark:bg-dark hover:dark:border-light hover:dark:text-light hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark"
+        target="_blank"
+      >
+        Resume <LinkArrow className={"w-6 ml-1"} />
+      </Link>
+      <Link
+        href="utpaltak1999ca@gmail.com"
+        className="ml-4 text-lg font-medium capitalize text-dark underline dark:text-light md:text-sm sm:text-xs"
+        target="_blank"
+      >
+        Contact
+      </Link>
+    </div>
+  </div>
+</div>
+
         </Layout>
       </main>
-      <HireMe />
-      <div className="absolute bottom-8 right-8 inline-block w-24">
+      <HireMe   />
+      {/* <div className="absolute bottom-8 right-8 inline-block w-24 ">
         <Image src={lightbulb} alt="random_image" className="w-full h-auto" />
-      </div>
+      </div> */}
     </>
   );
 }

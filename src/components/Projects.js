@@ -50,23 +50,24 @@ export default function Projects() {
   let Project = ({ title, type, img, link,  github }) => {
     return (
       
-        <article className="w-full flex  flex-col items-center justify-center rounded-2xl border border-solid  border-dark bg-light p-6  relative    ">
+        <article className="w-full flex  flex-col items-center justify-center rounded-2xl border border-solid xs:p-4 
+         border-dark bg-light p-6 dark:border-light  relative      ">
         <Link
           href={link}
-          className="w-full cursor-pointer overflow-hidden  rounded-lg"
+          className="w-full cursor-pointer overflow-hidden  rounded-lg "
           target="_blank"
         >
           <Image src={img} alt={title} className="w-full h-auto" />
         </Link>
 
         <div className="w-full flex flex-col  items-start justify-between pl-1 mt-2">
-          <span className="text-primary font-medium text-xl ">{type}</span>
+          <span className="text-primary font-medium text-xl sm:text-xl xs:text-lg  ">{type}</span>
           <Link
             className="hover:underline underline-offset-2"
             href={link}
             target="_blank"
           >
-            <h2 className="my-2 w-full text-left  text-2xl  font-bold ">
+            <h2 className="my-2 w-full text-left  text-2xl  sm:text-xl xs:text-lg  font-bold ">
               {title}
             </h2>
           </Link> 
@@ -74,11 +75,11 @@ export default function Projects() {
           <Link
               href={link}
               target="_blank"
-              className=" ml-2 text-lg font-semibold underline"
+              className=" ml-2 text-lg font-semibold   sm:text-[16px] underline"
             >
               VISIT
             </Link>
-            <Link href={github} className="w-10" target="_blank">
+            <Link href={github} className="w-10 md:w-8" target="_blank">
               <GithubIcon />
             </Link>
          
@@ -90,10 +91,10 @@ export default function Projects() {
   return (
     <Layout>
     <>
-      <main className="w-full mb-12 flex flex-col  items-center justify-center ">
-        <Layout  >
-          <Animatedtext className="mb-12" text={"Personal projects "} />
-          <motion.div className="grid grid-cols-12 gap-12"
+      <main className="w-full mb-12  lg:mt-10 flex flex-col  items-center justify-center  ">
+         
+          <Animatedtext className="mb-12  lg:!text-7xl md:!text-4xl  sm:!text-3xl  xs:!text-1xl   md: mt-9" text={"Personal projects "} />
+          <motion.div className="grid grid-cols-12 gap-12 sm:flex  sm:flex-wrap"
          Viewport={{once: true}}
           initial={{y:100}}
           whileInView={{y:0 , transition : {duration:0.5 , ease: "easeInOut"} }
@@ -114,7 +115,7 @@ local currency."
               />
             </div> */}
            
-            <div className="col-span-4"> <Project
+            <div className="col-span-4 "> <Project
               title="Crypto Screener Application"
               github="/"
               link="/"
@@ -136,7 +137,7 @@ local currency."
               img={project_1}
             /></div>
           </motion.div>
-          <motion.div className="grid grid-cols-12 gap-12 mt-7"
+          <motion.div className="grid grid-cols-12 gap-12 mt-7 sm:flex sm:flex-wrap"
             Viewport={{once: true}}
             initial={{y:50}}
             whileInView={{y:0 , transition : {duration:0.5 , ease: "easeInOut"} }
@@ -176,7 +177,7 @@ local currency."
               type="feature project"
               img={project_1}
             /></div></motion.div>
-        </Layout>
+         
       </main>
     </>
     </Layout>
