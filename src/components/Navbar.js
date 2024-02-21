@@ -6,10 +6,30 @@ import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon } from "./Icons";
 import { motion } from "framer-motion";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
 
+
+const scrollToSection = (id) => { 
+  const targetHeading = document.getElementById("Projects");
+
+console.log(targetHeading)
+  // Calculate the offset to leave some space above the heading
+  const offset = 1000; // Adjust this value according to your needs
+
+  // Scroll to the target headi ]]
+  console.log(targetHeading.offsetTop - offset)
+  const element = document.getElementById(id);
+  if (element) {
+ 
+    element.scrollIntoView({ 
+     block: "start",
+      behavior: 'smooth' });
+  }
+};
+
+
 const CustomLink = ({ href, title, className = "" }) => {
   let router = useRouter();
   return (
-    <Link href={href} className={`${className} relative group`}>
+    <a href={href} className={`${className} relative group`} onClick={(e) => { e.preventDefault(); scrollToSection(href.slice(1)); console.log(href.slice(1))} } >
       {title}
       <span
         className={`h-[1px] inline-block w-0 bg-dark absolute left-0 -bottom-0.5
@@ -17,21 +37,22 @@ const CustomLink = ({ href, title, className = "" }) => {
     ${router.asPath == href ? "w-full" : "w-0"}
     `}
       ></span>
-    </Link>
+    </a>
   );
 };
 
 const CustomMobileLink = ({ href, title, className = "", toggle }) => {
   let router = useRouter();
-  const handleclick = () => {
+  const handleclick = (href) => {
     toggle();
-    router.push(href);
+    scrollToSection(href.slice(1))
+    
   };
   return (
     <button
       href={href}
       className={`${className}  relative group text-light dark:text-dark my-2`}
-      onClick={handleclick}
+      onClick={()=>handleclick(href)}
     >
       {title}
       <span
@@ -76,14 +97,14 @@ export default function Navbar() {
 
       <div className="w-full  lg:hidden flex  justify-between items-center ">
         <nav>
-          <CustomLink href="/" title="Home" className="mr-4" />
-          <CustomLink href="/about" title="About" className="mx-4" />
-          <CustomLink href="/projects" title="Projects" className="mx-4" />
-          <CustomLink href="/articles" title="Articles" className="ml-4" />
+          <CustomLink href="/Home" title="Home" className="mr-4"  />
+          <CustomLink href="/Experience" title="Experience" className="mx-4"  />
+          <CustomLink href="/Projects" title="Projects" className="mx-4"   />
+          <CustomLink href="/About" title="About-ME" className="ml-4" />
         </nav>
         <nav className="flex items-center justify-center flex-wrap">
           <motion.a
-            href="/"
+            href="https://github.com/utpal5899"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             className="w-6 mx-3"
@@ -91,10 +112,10 @@ export default function Navbar() {
             <GithubIcon />
           </motion.a>
           <motion.a
-            href="/about"
+            href="https://www.linkedin.com/in/utpal-tank-211347194"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className="w-6 ml-3"
+            className="w-6 mx-3"
           >
             <LinkedInIcon />
           </motion.a>
@@ -124,26 +145,26 @@ export default function Navbar() {
         >
           <nav className="flex flex-col justify-center items-center ">
             <CustomMobileLink
-              href="/"
+              href="/Home"
               title="Home"
               className=""
               toggle={handlerClick}
             />
             <CustomMobileLink
-              href="/about"
-              title="About"
+              href="/Experience"
+              title="Experience"
               className=""
               toggle={handlerClick}
             />
             <CustomMobileLink
-              href="/projects"
+              href="/Projects"
               title="Projects"
               className=""
               toggle={handlerClick}
             />
             <CustomMobileLink
-              href="/articles"
-              title="Articles"
+              href="/About"
+              title="About-ME"
               className=""
               toggle={handlerClick}
             />

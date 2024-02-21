@@ -7,10 +7,12 @@ export default function Animatedtext({ text, className }) {
     },
     animate: {
       opacity: 1,
-      transition: { delay: 0.5,   staggerChildren: 0.08 },
+      transition: { delay: 0.5,    staggerChildren: 0.08 },
     },
   
   };
+
+
   let singleword = {
     initial: {
       opacity: 0,
@@ -23,6 +25,8 @@ export default function Animatedtext({ text, className }) {
       
     },
   };
+
+  
   return (
     <div className="w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden  sm:py-0">
       <motion.h1

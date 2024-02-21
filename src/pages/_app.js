@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }) {
       <Navbar/>
     <Component {...pageProps} />
     <Experience/>
-    <Projects/>
+    <Projects />
     <Footer />
     </main>
     </>

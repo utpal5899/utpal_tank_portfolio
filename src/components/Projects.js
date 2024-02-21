@@ -5,7 +5,7 @@ import Animatedtext from "./Animatedtext";
 import Link from "next/link";
 import Image from "next/image";
 import { GithubIcon } from "./Icons";
-import project_1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
+import project_1 from "../../public/images/projects/blogVista.png";
 import {motion} from "framer-motion"
 export default function Projects() {
 //   let Featured_project = ({ type, title, summary, img, link, github }) => {
@@ -50,7 +50,7 @@ export default function Projects() {
   let Project = ({ title, type, img, link,  github }) => {
     return (
       
-        <article className="w-full flex  flex-col items-center justify-center rounded-2xl border border-solid xs:p-4 
+        <article id="Projects" className="w-full flex  flex-col items-center justify-center rounded-2xl border border-solid xs:p-4 
          border-dark bg-light p-6 dark:border-light  relative      ">
         <Link
           href={link}
@@ -116,24 +116,24 @@ local currency."
             </div> */}
            
             <div className="col-span-4 "> <Project
-              title="Crypto Screener Application"
-              github="/"
-              link="/"
-              type="feature project"
+              title="EventHub Web Application"
+              github="https://github.com/utpal5899/EventHub-Web-Application"
+              link="https://github.com/utpal5899/EventHub-Web-Application"
+              type="Conestoga College "
               img={project_1}
             /></div> 
             <div className="col-span-4"> <Project
-              title="Crypto Screener Application"
-              github="/"
-              link="/"
-              type="feature project"
+              title="Drive Test Application"
+              github="https://github.com/utpal5899/Drive-Test-application"
+              link="https://github.com/utpal5899/Drive-Test-application"
+              type="Conestoga College "
               img={project_1}
             /></div>
             <div className="col-span-4"> <Project
-              title="Crypto Screener Application"
-              github="/"
-              link="/"
-              type="feature project"
+              title="Blog Vista Applicatio"
+              github="https://github.com/utpal5899/Drive-Test-application"
+              link="https://github.com/utpal5899/Drive-Test-application"
+              type="Personal Project"
               img={project_1}
             /></div>
           </motion.div>
@@ -157,26 +157,20 @@ local currency."
             </div> */}
            
             <div className="col-span-4"> <Project
-              title="Crypto Screener Application"
-              github="/"
-              link="/"
-              type="feature project"
+              title="Memory Card Game"
+              github="https://github.com/utpal5899/Memory_Game"
+              link="https://github.com/utpal5899/Memory_Game"
+              type="Conestoga College"
               img={project_1}
             /></div> 
             <div className="col-span-4"> <Project
-              title="Crypto Screener Application"
-              github="/"
-              link="/"
-              type="feature project"
+              title="E-Commerce-AndroidApp"
+              github="https://github.com/utpal5899/ecommerce_android_app"
+              link="https://github.com/utpal5899/ecommerce_android_app"
+              type="Conestoga College"
               img={project_1}
             /></div>
-            <div className="col-span-4"> <Project
-              title="Crypto Screener Application"
-              github="/"
-              link="/"
-              type="feature project"
-              img={project_1}
-            /></div></motion.div>
+            </motion.div>
          
       </main>
     </>
