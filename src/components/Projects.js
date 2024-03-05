@@ -6,6 +6,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { GithubIcon } from "./Icons";
 import project_1 from "../../public/images/projects/blogVista.png";
+import project_2 from "../../public/images/projects/event_image.png";
+import project_3 from "../../public/images/projects/memeory_game.png";
+import project_4 from "../../public/images/projects/blogg.png";
+import project_5 from "../../public/images/projects/memeory_game.png";
 import {motion} from "framer-motion"
 export default function Projects() {
 //   let Featured_project = ({ type, title, summary, img, link, github }) => {
@@ -119,8 +123,8 @@ local currency."
               title="EventHub Web Application"
               github="https://github.com/utpal5899/EventHub-Web-Application"
               link="https://github.com/utpal5899/EventHub-Web-Application"
-              type="Conestoga College "
-              img={project_1}
+              type="Personal Project"
+              img={project_2}
             /></div> 
             <div className="col-span-4"> <Project
               title="Drive Test Application"
@@ -134,7 +138,7 @@ local currency."
               github="https://github.com/utpal5899/Drive-Test-application"
               link="https://github.com/utpal5899/Drive-Test-application"
               type="Personal Project"
-              img={project_1}
+              img={project_4}
             /></div>
           </motion.div>
           <motion.div className="grid grid-cols-12 gap-12 mt-7 sm:flex sm:flex-wrap"
@@ -161,7 +165,7 @@ local currency."
               github="https://github.com/utpal5899/Memory_Game"
               link="https://github.com/utpal5899/Memory_Game"
               type="Conestoga College"
-              img={project_1}
+              img={project_3}
             /></div> 
             <div className="col-span-4"> <Project
               title="E-Commerce-AndroidApp"
